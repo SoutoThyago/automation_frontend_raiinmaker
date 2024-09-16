@@ -1,7 +1,8 @@
-
 # Automated Test Scenarios for Raiinmaker Platform
 
 This project contains automated test scenarios focused on the Raiinmaker platform's core functionalities, including user registration, AI content contribution, transaction rewards, and cryptocurrency wallet integration.
+
+The project is implemented using Ruby and follows the Behavior Driven Development (BDD) approach using Cucumber and Gherkin for writing test scenarios. Selenium and Capybara are used for browser automation, while Allure is used for generating detailed test reports.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -20,6 +21,8 @@ This project contains automated test scenarios focused on the Raiinmaker platfor
 ## Project Overview
 
 This project focuses on automating critical test cases for the Raiinmaker platform, a cryptocurrency-based service that allows users to contribute, validate AI models, and receive rewards. These scenarios are written in BDD (Behavior Driven Development) format using Gherkin, which allows easy readability and shared understanding between developers and stakeholders.
+
+The project uses Ruby as the programming language and integrates various popular testing tools.
 
 ## Test Features
 
@@ -58,10 +61,13 @@ Users can integrate cryptocurrency wallets to enable transactions. This feature 
 
 ## Test Frameworks & Tools
 
-- **BDD Framework**: Cucumber or SpecFlow (Choose based on your stack)
-- **Test Automation**: Selenium, Cypress, or Playwright
-- **Languages**: JavaScript, Java, or Python
-- **CI/CD Integration**: GitHub Actions or Jenkins
+The following tools and frameworks are used in this project:
+
+- **Language**: Ruby
+- **BDD Framework**: Cucumber with Gherkin syntax for writing test scenarios
+- **Browser Automation**: Selenium WebDriver and Capybara for simulating user interactions with the web application
+- **Reporting**: Allure for generating detailed and visual test reports
+- **CI/CD Integration**: GitHub Actions or Jenkins for continuous integration
 
 ---
 
@@ -69,29 +75,4 @@ Users can integrate cryptocurrency wallets to enable transactions. This feature 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/SoutoThyago/automation_frontend_raiinmaker.git
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Run the tests:
-   ```bash
-   npm run test
-   ```
-
-4. View test results in the terminal or test report.
-
----
-
-## Contribution
-
-Feel free to fork this repository, create a new branch, and submit a pull request for any bug fixes or new test scenarios. All contributions are welcome!
-
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+   git clone https://github.com/your-username/raiinmaker-automation-tests.git

@@ -1,0 +1,20 @@
+default: --profile pretty -p qa -p chrome -p html -p timeout_padrao -p allure -p verifica_downloads -p windows
+
+qa: AMBIENTE=qa
+dev: AMABIENTE=dev
+desenv: AMBIENTE=desenv
+chrome: BROWSER=chrome
+linux: SO=linux
+windows: SO=windows
+firefox: BROWSER=firefox
+chrome_headless: BROWSER=chrome_headless
+remote_driver: REMOTE_DRIVER=true
+hub_url: HUB_URL=http://localhost:4444/wd/hub
+timeout_padrao: TIMEOUT_PADRAO=5
+salvar_screenshot_para_cada_passo: SALVAR_SCREENSHOT_PARA_CADA_PASSO=true
+
+pretty: --format pretty
+html: --format html --out=reports/relatorio.html
+allure: --format AllureCucumber::CucumberFormatter --out reports_allure
+
+verifica_downloads: DIRETORIO_DOWNLOADS=./downloads

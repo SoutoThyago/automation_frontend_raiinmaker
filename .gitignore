@@ -1,2 +1,8 @@
-#remove node_modules folder
-node_modules/ 
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
