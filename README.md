@@ -75,4 +75,16 @@ The following tools and frameworks are used in this project:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/raiinmaker-automation-tests.git
+   git clone https://github.com/SoutoThyago/automation_frontend_raiinmaker
+
+2. Execute Bundle command:
+   ```bash
+   bundle install
+   
+3. Get Cucumber Gem:
+   ```bash
+   bundle gem cucumber
+
+4. Get allure report Gem:
+   ```bash
+   bundle gem allure serve
