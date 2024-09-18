@@ -5,9 +5,9 @@ Capybara.register_driver :selenium do |app|
 
     if BROWSER.eql?('chrome')     
         if SO.eql?('linux')
-            Selenium::WebDriver::Chrome.driver_path =  './resources/drivers/chromedriver'
+            sleep 1
         elsif SO.eql?('windows')
-            puts "driver"
+            sleep 1
         end
 
         download_path = File.expand_path('downloads').gsub! "/", "\\"
@@ -20,9 +20,9 @@ Capybara.register_driver :selenium do |app|
 
     elsif BROWSER.eql?('chrome_headless')
         if SO.eql?('linux')
-            Selenium::WebDriver::Chrome::Service.driver_path =  '/usr/bin/chromedriver'
+            sleep 1
         elsif SO.eql?('windows')
-            puts "driver"
+            sleep 1
         end
         
         download_path = File.expand_path('downloads').gsub! "/", "\\"
