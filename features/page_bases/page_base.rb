@@ -14,7 +14,7 @@ class PageBase < SitePrism::Page
     end
 
     def double_click(simbolo_elemento)
-        espera_elemento_visivel simbolo_elemento
+        wait_visible_element simbolo_elemento
         eval(simbolo_elemento.to_s).double_click
         ReportHelper.register_event
     end
@@ -58,12 +58,12 @@ class PageBase < SitePrism::Page
         ReportHelper.register_event
     end
 
-    def espera_elemento_visivel(simbolo_elemento)
+    def wait_visible_element(simbolo_elemento)
         eval("wait_until_#{simbolo_elemento}_visible")
         ReportHelper.register_event
     end
 
-    def elemento_visivel?(simbolo_elemento)
+    def visible_element?(simbolo_elemento)
         sleep 1
         begin
             eval("wait_until_#{simbolo_elemento}_visible")
@@ -170,7 +170,7 @@ class PageBase < SitePrism::Page
 
         while (Time.now - firstTime) < waitTime.to_i do
             begin
-                if elemento_visivel? element
+                if visible_element? element
                     click element
                     doClick = true
 
@@ -195,7 +195,7 @@ class PageBase < SitePrism::Page
 
         while (Time.now - firstTime) < waitTime.to_i do
             begin
-                if elemento_visivel? currentElement
+                if visible_element? currentElement
                     click currentElement
                     doClick = true
                     sleep 1
@@ -208,7 +208,7 @@ class PageBase < SitePrism::Page
                 end
             end
 
-            if elemento_visivel? nextElement
+            if visible_element? nextElement
                 break
             end
         end
