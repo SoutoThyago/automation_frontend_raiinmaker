@@ -8,7 +8,7 @@ class ReportHelper
     def self.register_event
 
         title = "#{get_formatted_counter}-#{caller[1][/`.*'/][1..-2]}"
-        if SALVAR_SCREENSHOT_PARA_CADA_PASSO.eql?('true')
+        if SAVE_SCREENSHOT_STEP_BY_STEP.eql?('true')
             register_info title 
             register_screenshot title
         else
