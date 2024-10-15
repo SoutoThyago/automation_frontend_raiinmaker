@@ -13,19 +13,52 @@ class LoginPage < PageBase
 
     #elements block end
 
+    #variables block begin
+
+        @emailLogin    = ''
+        @passwordLogin = ''
+
+    #variables block end
 
     #methods block begin
+    
+    private
+
+    def actionSetEmail
+        if AMBIENTE.eql?('prod')
+            @emailLogin = EMAILPROD
+        elsif AMBIENTE.eql?('staging')
+            @emailLogin = EMAILSTAGING
+        end
+    end
+
+    def actionSetPassword(credentialStatus)
+        if credentialStatus.eql?('true')
+            if AMBIENTE.eql?('prod')
+                @passwordLogin = PASSWORDPROD
+            elsif AMBIENTE.eql?('staging')
+                @passwordLogin = PASSWORDSTAGING
+            end
+        else
+            @passwordLogin = '123$WrongValue'
+        end
+    end
+    
+    public
 
     def clickButtonLogin
         clickIfVisible :buttonLogin
     end
 
-    def sendEmail(userEmail)
-        send_keys :fieldUserEmail, userEmail
+    def sendEmail
+        actionSetEmail
+        send_keys :fieldUserEmail, @emailLogin
     end
 
-    def sendPassword(userPassword)
-        send_keys :fieldUserPassword, userPassword
+    def sendPassword(credentialStatus)
+        actionSetPassword(credentialStatus)            
+
+        send_keys :fieldUserPassword, @passwordLogin
     end
 
     def clickButtonDoLogin
