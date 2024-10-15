@@ -1,8 +1,12 @@
-# frozen_string_literal: true
+source 'http://rubygems.org'
 
-source "https://rubygems.org"
-
-# Specify your gem's dependencies in automation_frontend_raiinmaker.gemspec
-gemspec
-
-gem "rake", "~> 13.0"
+gem 'capybara'
+gem 'rspec'
+gem 'cucumber'
+gem 'site_prism'
+gem 'selenium-webdriver'
+gem 'allure-cucumber'
+gem 'fileutils'
+gem "faker"
+gem 'roo'
+gem 'roo-xls'
