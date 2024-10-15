@@ -5,7 +5,7 @@ Before '@url_padrao' do | scenario |
     Capybara.page.driver.browser.manage.window.maximize
 end            
 
-#Prints dos casos de sucesso
+#Prints success test case
 After '@after' do |scenario|  
     ReportHelper.register_screenshot "screenshoot: " + scenario.name.gsub(/\s+/, '').tr('/', '')
 end
