@@ -2,9 +2,14 @@ Given('the user is on the login page') do
     loginPage.clickButtonLogin
 end
 
-When('the user enters credentials {string} {string}') do |userLogin, userPassword|
-    loginPage.sendEmail(userLogin)
-    loginPage.sendPassword(userPassword)
+When('the user enters credentials') do 
+    loginPage.sendEmail
+    loginPage.sendPassword('true')
+end
+
+When('the user enters wrong credentials') do
+    loginPage.sendEmail
+    loginPage.sendPassword('false')
 end
 
 And('the user submits the login form') do
