@@ -42,12 +42,14 @@ class PageBase < SitePrism::Page
     end
 
     def get_text(simbolo_elemento)
+        eval("wait_until_#{simbolo_elemento}_visible wait:30")
         texto = eval(simbolo_elemento.to_s).text
         ReportHelper.register_event
         texto
     end
 
     def get_value(simbolo_elemento)
+        eval("wait_until_#{simbolo_elemento}_visible wait:30")
         texto = eval(simbolo_elemento.to_s)['value']
         ReportHelper.register_event
         texto
