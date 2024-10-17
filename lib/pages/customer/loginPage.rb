@@ -21,7 +21,7 @@ class LoginPage < PageBase
     #variables block end
 
     #methods block begin
-    
+
     private
 
     def actionSetEmail
@@ -29,6 +29,8 @@ class LoginPage < PageBase
             @emailLogin = EMAILPROD
         elsif AMBIENTE.eql?('staging')
             @emailLogin = EMAILSTAGING
+        elsif AMBIENTE.eql?('dev')
+            @emailLogin = EMAILDEV
         end
     end
 
@@ -38,6 +40,8 @@ class LoginPage < PageBase
                 @passwordLogin = PASSWORDPROD
             elsif AMBIENTE.eql?('staging')
                 @passwordLogin = PASSWORDSTAGING
+            elsif AMBIENTE.eql?('dev')
+                @passwordLogin = PASSWORDDEV    
             end
         else
             @passwordLogin = '123$WrongValue'
@@ -67,7 +71,7 @@ class LoginPage < PageBase
 
     def userLogged?
         sleep 10
-        return visible_element? :fieldAboutUser
+        return visible_element? :fieldAboutUser        
     end
 
     def notUserLogged?
