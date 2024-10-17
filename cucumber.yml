@@ -16,7 +16,7 @@ allure: --format AllureCucumber::CucumberFormatter --out reports_allure
 html:   --format html --out=reports/relatorio.html
 
 default: --profile pretty 
-          -p staging 
+          -p dev 
           -p chrome 
           -p html 
           -p timeout_padrao 
