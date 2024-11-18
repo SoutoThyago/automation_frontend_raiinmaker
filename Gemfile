@@ -10,3 +10,4 @@ gem 'fileutils'
 gem "faker"
 gem 'roo'
 gem 'roo-xls'
+gem 'parallel_tests'
