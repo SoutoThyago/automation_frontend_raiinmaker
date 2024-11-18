@@ -17,10 +17,10 @@ html:   --format html --out=reports/relatorio.html
 
 default: --profile pretty 
           -p dev 
-          -p chrome 
+          -p chrome_headless
           -p html 
           -p timeout_padrao 
           -p allure 
           -p verify_downloads 
-          -p windows
+          -p linux
           -p save_screenshot_step_by_step
