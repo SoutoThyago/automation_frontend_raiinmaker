@@ -51,6 +51,9 @@ class LoginPage < PageBase
     public
 
     def clickButtonLogin
+        api_key = ENV['MY_SECRET_VALUE']
+        puts "MY_SECRET_VALUE: #{api_key}"
+        sleep 10 
         clickIfVisible :buttonLogin
     end
 
