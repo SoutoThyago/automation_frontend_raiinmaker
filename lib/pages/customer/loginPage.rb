@@ -52,7 +52,12 @@ class LoginPage < PageBase
 
     def clickButtonLogin
         api_key = ENV['MY_SECRET_VALUE']
-        puts "MY_SECRET_VALUE: #{api_key}"
+        
+        if api_key.eql?('thyago')
+            puts "deu certo"
+            puts "MY_SECRET_VALUE: #{api_key}"
+        end
+        
         sleep 10 
         clickIfVisible :buttonLogin
     end
